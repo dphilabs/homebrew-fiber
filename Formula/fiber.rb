@@ -1,7 +1,7 @@
 class Fiber < Formula
   desc "Agent Runtime Harness"
-  homepage "https://github.com/dphi-network/fiber"
-  url "https://github.com/dphi-network/fiber/archive/refs/tags/v1.1.4.10.tar.gz"
+  homepage "https://github.com/dphilabs/fiber"
+  url "https://github.com/dphilabs/fiber/archive/refs/tags/v1.1.4.10.tar.gz"
   sha256 "57617721e0c443e12b45da09675a41e040116aba6318f1bd2911f38a34395237"
 
   depends_on "python@3.12"
@@ -30,7 +30,7 @@ class Fiber < Formula
 
       To start the Redis tunnel and background daemon service:
         brew services start redis
-        brew services start dphi-network/fiber/fiber
+        brew services start dphilabs/fiber/fiber
     EOS
   end
 
