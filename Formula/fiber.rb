@@ -1,8 +1,8 @@
 class Fiber < Formula
   desc "Agent Runtime Harness"
   homepage "https://github.com/dphilabs/fiber"
-  url "https://github.com/dphilabs/fiber/archive/refs/tags/v1.1.4.10.tar.gz"
-  sha256 "57617721e0c443e12b45da09675a41e040116aba6318f1bd2911f38a34395237"
+  url "https://github.com/dphilabs/fiber/archive/refs/tags/v1.1.4.11.tar.gz"
+  sha256 "cea5bf59cf55dbb81716d53b9829a7b6623568eb183cf85c281b135496ca8527"
 
   depends_on "python@3.12"
   depends_on "redis"
