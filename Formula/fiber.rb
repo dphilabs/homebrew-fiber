@@ -5,14 +5,13 @@ class Fiber < Formula
   sha256 "cea5bf59cf55dbb81716d53b9829a7b6623568eb183cf85c281b135496ca8527"
 
   depends_on "python@3.12"
-  depends_on "redis"
 
   def install
     # Inject pretend version for hatch-vcs (setuptools-scm) when building from tarball without .git
     ENV["SETUPTOOLS_SCM_PRETEND_VERSION"] = version.to_s
     ENV["LDFLAGS"] = "-Wl,-headerpad_max_install_names"
 
-    # Create isolated virtualenv in libexec and install package
+    # Create isolated virtualenv in libexec and install package (includes embedded valkeylite)
     system "python3.12", "-m", "venv", libexec
     system libexec/"bin/pip", "install", "-U", "pip"
     system libexec/"bin/pip", "install", "."
@@ -28,8 +27,7 @@ class Fiber < Formula
 
         fiber init
 
-      To start the Redis tunnel and background daemon service:
-        brew services start redis
+      To start the background daemon service (embedded Valkey starts automatically):
         brew services start dphilabs/fiber/fiber
     EOS
   end
